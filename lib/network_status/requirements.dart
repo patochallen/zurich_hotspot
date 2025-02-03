@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:network_ap/network_ap.dart';
-import 'package:network_ap/network_ap.dart';
-import 'package:network_ap/network_ap.dart';
-// import 'package:network_ap_example/permissions_example.dart';
 import 'package:zurich/extensions/context_extension.dart';
 import 'package:zurich/hotspot_bloc/hotspot_bloc.dart';
 import 'package:zurich/network_status/requirement_item.dart';
@@ -74,16 +71,6 @@ class _RequirementsState extends State<Requirements> with WidgetsBindingObserver
           ),
           const Divider(),
           const SizedBox(height: 10),
-          // TextButton(
-          //   onPressed: () => context.hotspotBloc.add(const HotspotEvent.checkPermissions()),
-          //   child: const Text(
-          //     'refresh',
-          //     style: TextStyle(
-          //       fontSize: 20,
-          //       decoration: TextDecoration.underline,
-          //     ),
-          //   ),
-          // ),
           // GestureDetector(
           //   onTap: () => context.hotspotBloc.add(const HotspotEvent.checkPermissions()),
           //   child: const Text('refresh', style: TextStyle(fontSize: 20, decoration: TextDecoration.underline)),

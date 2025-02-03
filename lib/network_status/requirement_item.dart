@@ -17,8 +17,6 @@ class RequirementItem extends StatelessWidget {
     return ListTile(
       // visualDensity: VisualDensity.compact,
       onTap: status ? null : callback,
-      // dense: true,
-      // tileColor: Colors.grey.shade100,
       title: Text(name, style: const TextStyle(fontSize: 16)),
       trailing: Icon(
           status ? Icons.check : Icons.error,

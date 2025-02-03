@@ -3,8 +3,6 @@ import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:network_ap/network_ap.dart';
-// import 'package:network_ap_example/permissions_example.dart';
-// import 'package:network_info_plus/network_info_plus.dart';
 
 part 'hospot_state.dart';
 
@@ -66,7 +64,6 @@ class HotspotBloc extends Bloc<HotspotEvent, HotspotState> {
         emit(state.copyWith(ssid: null, password: null, data: null));
         return;
       }
-      // await Future.delayed(Duration(seconds: 5));
       emit(state.copyWith(
         ssid: result.ssid,
         url: result.url,
@@ -104,8 +101,6 @@ class HotspotBloc extends Bloc<HotspotEvent, HotspotState> {
     final writeSettingsGranted = await networkAp.isWriteSettingsGranted();
     final deviceConnectedToWiFi = await networkAp.isDeviceConnectedToWifi();
     final deviceTetheringConnected = await networkAp.isDeviceTetheringConnected();
-    // final url = await _getUrl();
-    // print('SARASA URL: $url');
     emit(state.copyWith(
       locationGranted: locationGranted,
       nearbyWiFiDevicesGranted: nearbyDevicesGranted,
@@ -138,13 +133,4 @@ class HotspotBloc extends Bloc<HotspotEvent, HotspotState> {
     await networkAp.askWriteSettingPermission();
     add(const HotspotEvent.checkPermissions());
   }
-
-  // Future<String?> _getUrl() async {
-  //   try {
-  //     return await NetworkInfo().getWifiIP();
-  //   } catch (e) {
-  //     print('SARASA ERROR NetworkInfo().getWifiIP $e');
-  //   }
-  //   return null;
-  // }
 }
