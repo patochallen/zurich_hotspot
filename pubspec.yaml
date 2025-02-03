@@ -1,5 +1,5 @@
 name: zurich
-description: "A new Flutter project."
+description: "A new Flutter project to create a local hotspot"
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
